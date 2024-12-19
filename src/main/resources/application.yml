@@ -1,3 +1,8 @@
 spring:
   application:
     name: Library API
+  datasource:
+    url: jdbc:postgresql://localhost:5432/librarydb
+    username: postgres
+    password: docker
+    driver-class-name: org.postgresql.Driver
