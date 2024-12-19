@@ -12,7 +12,7 @@
 	<artifactId>libraryapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Library API</name>
-	<description>Library API for Sping data JPA pratical study</description>
+	<description>Library API for Spring data JPA pratical study</description>
 	<url/>
 	<licenses>
 		<license/>
