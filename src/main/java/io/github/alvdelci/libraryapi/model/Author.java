@@ -3,6 +3,7 @@ package io.github.alvdelci.libraryapi.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.UUID;
 @Table(name = "author", schema = "public")
 @Getter
 @Setter //Gera os getters e setters em tempo de compilacao
+@ToString
 public class Author {
 
     @Id
