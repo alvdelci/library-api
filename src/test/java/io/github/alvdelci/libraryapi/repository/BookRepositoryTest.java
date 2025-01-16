@@ -53,4 +53,29 @@ class BookRepositoryTest {
 
         repository.save(book);
     }
+
+    @Test
+    void updateBookAuthor() {
+        UUID bookId = UUID.fromString("0805cf6b-b6b3-4737-b90b-287c54680068");
+        var bookToUpdate = repository
+                .findById(bookId)
+                .orElse(null);
+
+        UUID authorId = UUID.fromString("8e8a6667-ce7d-441a-a7e9-378a1c0ba118");
+        Author newAuthor = authorRepository.findById(authorId).orElse(null);
+
+        bookToUpdate.setAuthor(newAuthor);
+
+        repository.save(bookToUpdate);
+    }
+
+    @Test
+    void deleteById() {
+        UUID bookId = UUID.fromString("27c50bd8-15f5-4e56-9164-5f0d10dbb895");
+
+        repository.deleteById(bookId);
+    }
+
+
+
 }
