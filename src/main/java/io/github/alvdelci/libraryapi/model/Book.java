@@ -32,7 +32,7 @@ public class Book {
     @Column(name = "price", precision = 18, scale = 2)
     private BigDecimal price;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne//(cascade = CascadeType.ALL) //Com o cascade quando deletar um livro o author sera deletado tambem
     @JoinColumn(name = "author_id")
     private Author author;
 }
