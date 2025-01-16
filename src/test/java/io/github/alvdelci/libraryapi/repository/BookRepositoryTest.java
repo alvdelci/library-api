@@ -35,4 +35,22 @@ class BookRepositoryTest {
 
         repository.save(book);
     }
+
+    @Test
+    void saveWithCascadeTest() {//usar o cascade em producao pode ser perigoso. Estudar bem se for utilizar, mas é melhor fazer a criação na mao
+        Book book = new Book();
+        book.setTitle("How to make tofu");
+        book.setGender(BookGender.BIOGRAFIA);
+        book.setIsbn("12343-4234");
+        book.setPublicationDate(LocalDate.of(2000, 11, 9));
+
+        Author author = new Author();
+        author.setName("Rodolfo");
+        author.setNationality("Korean");
+        author.setBirthday(LocalDate.of(1984, 4, 23));
+
+        book.setAuthor(author);
+
+        repository.save(book);
+    }
 }
